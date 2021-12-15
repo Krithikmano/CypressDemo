@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+     "strict": true,
+      "module": "commonjs",
+      "target": "es6",
+      "lib": ["es6","dom"],
+      "types": ["node","cypress"],
+      "allowJs": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true
+    },
+    "include": ["**/*.ts","../node_modules/@shelex/cypress-allure-plugin/reporter","../node_modules/cypress"]
+  }

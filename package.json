@@ -1,13 +1,33 @@
 {
   "name": "cypressdemo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cypress Automation",
+  "mani":"index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.1.1",
+    "@shelex/cypress-allure-plugin":"^2.19.5",
+    "@types/qs":"^6.9.7",
+    "allure-commandline":"^2.17.2",
+    "axios":"^0.24.0",
+    "cucumber":"7.0.0-rc.0",
+    "prettier-eslint":"13.0.0",
+    "tsify":"^5.0.4",
+    "eslint":"^8.3.0",
+    "@types/node":"^17.0.0",
+    "@typescript-eslint/eslint-plugin": "5.7.0",
+    "@typescript-eslint/parser":"^5.4.0",
+    "cypress-cucumber-preprocessor":"4.3.1",
+    "prettier":"^2.5.0",
+    "typescript":"4.5.4"
+
+  },
+  "cypress-cucumber-preprocessor":{
+    "nodeGlobalStepDefinitions": false,
+    "step_definitions":"cypress/support/step_definitions/"
   }
 }
