@@ -1,1 +1,13 @@
-{}
+{
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "testFiles":"**/*.feature",
+    "chromeWebSecurity":false,
+    "video": true,
+    "env":{
+        "allure":true,
+        "allureAddVideoOnPass":true,
+        "allureClearSkippedTests":true
+
+
+    }
+}

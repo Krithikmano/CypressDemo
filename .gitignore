@@ -1,3 +1,7 @@
 node_modules
 allure*
-packate-lock.json
+package-lock.json
+cypress/video
+allure*
+cypress/downloads
+cypress/screen*

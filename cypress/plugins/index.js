@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+/// <reference types="@shelex/cypress-allure-plugin"/>
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -16,7 +17,17 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+
+const allureWriter = require('@shelex/cypress-allure-plugin/writer')
+const cucumber = require('cypress-cucumber-preprocessor').default
+const browserify = require('@cypress/browserify-preprocessor')
+const options = browserify.defaultOptions;
+
+module.exports=(on,config)=> {
+     options.browserifyOptions.plugin.unshift(['tsify'])
+     on('file:preprocessor', cucumber())
+      on("file:preprocessor", cucumber(options));
+      allureWriter(on,config);
+     return config;
+   
 }
